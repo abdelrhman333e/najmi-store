@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجات نجمي ستور</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* style.css */
+        .products-list {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .buy-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #25D366;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .buy-btn:hover {
+            background: #128C7E;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            right: 0; left: 0; top: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background: #fff;
+            margin: 60px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 350px;
+            text-align: center;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            font-size: 28px;
+            color: #c0392b;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>منتجات نجمي ستور</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">الرئيسية</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="index.html#about">عن المتجر</a></li>
+                <li><a href="index.html#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products">
+            <h2>المنتجات</h2>
+            <p>تصفح مجموعتنا الواسعة من المنتجات.</p>
+            <p style="color:#2980b9;">
+                منتجات أصلية 100% مع ضمان استرجاع الأموال.
+            </p>
+            <p style="color:#c0392b;">
+                الكمية محدودة – سارع بالطلب قبل نفاد المخزون!
+            </p>
+
+            <div class="products-list">
+                <!-- منتج 1 -->
+                <div class="product-card">
+                    <img src="assets/img/black.png" alt="بنطلون شبابي اسود" style="width:150px;height:150px;cursor:pointer;" onclick="showModal('modal1')">
+                    <h3>بنطلون شبابي عصري</h3>
+                    <p>خامة ممتازة ومقاسات متعددة</p>
+                    <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                </div>
+                <!-- نافذة التفاصيل للمنتج 1 -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <img src="assets/img/black.png" alt="بنطلون شبابي اسود" style="width:180px;height:180px;">
+                        <h3>بنطلون شبابي عصري</h3>
+                        <p>تفاصيل المنتج: شروال سمر ميلتون قطن 100%, متوفر ثلاث مقاسات ميديم, لارج, واكس لارج, باللون الاسمر.</p>
+                        <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+
+                <!-- منتج 2 -->
+                <div class="product-card">
+                    <img src= "assets/img/z.png" alt="بنطلون شبابي زيتي" style="width:150px;height:150px;cursor:pointer;" onclick="showModal('modal2')">
+                    <h3>بنطلون زيتي شبابي</h3>
+                    <p>مريح وأنيق لجميع المناسبات</p>
+                    <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <img src="assets/img/z.png" alt="بنطلون شبابي زيتي" style="width:180px;height:180px;">
+                        <h3>بنطلون زيتي شبابي</h3>
+                        <p>تفاصيل المنتج: شروال سمر ميلتون قطن 100%, متوفر ثلاث مقاسات ميديم, لارج, واكس لارج, باللون الاسمر.</p>
+                        <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+
+                <!-- منتج 3 -->
+                <div class="product-card">
+                    <img src="assets/img/r.png" alt="بنطلون رمادي" style="width:150px;height:150px;cursor:pointer;" onclick="showModal('modal3')">
+                    <h3>بنطلون رمادي</h3>
+                    <p>ستايل عملي وجودة عالية</p>
+                    <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <img src="assets/img/r.png" alt="بنطلون رمادي" style="width:180px;height:180px;">
+                        <h3>بنطلون رمادي</h3>
+                        <p>تفاصيل المنتج: شروال سمر ميلتون قطن 100%, متوفر ثلاث مقاسات ميديم, لارج, واكس لارج, باللون الرمادي.</p>
+                        <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+
+                <!-- منتج 4 -->
+                <div class="product-card">
+                    <img src="assets/img/m.png" alt="بنطلون Mint Green" style="width:150px;height:150px;cursor:pointer;" onclick="showModal('modal4')">
+                    <h3>بنطلون Mint Green</h3>
+                    <p>خامة قطنية مريحة</p>
+                    <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <img src="assets/img/m.png" alt="بنطلون Mint Green" style="width:180px;height:180px;">
+                        <h3>بنطلون Mint Green</h3>
+                        <p>تفاصيل المنتج: شروال سمر ميلتون قطن 100%, متوفر ثلاث مقاسات ميديم, لارج, واكس لارج, باللون Mint Green.</p>
+                        <p style="color:#27ae60;font-weight:bold;">225 جنيه بدل 250 جنيه علي أول طلب</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 نجمي ستور. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script>
+        function showModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        // إغلاق النافذة عند الضغط خارجها
+        window.onclick = function(event) {
+            document.querySelectorAll('.modal').forEach(function(modal){
+                if (event.target === modal) modal.style.display = "none";
+            });
+        }
+    </script>
+</body>
+</html>
