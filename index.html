@@ -1,75 +1,404 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نجمي ستور</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <title>نجمي ستور - Najmi Store</title>
+    <meta name="description" content="Najmi Store — high-quality trousers at affordable prices. Local delivery in Egypt.">
+    <meta name="theme-color" content="#25D366">
+    <meta property="og:title" content="Najmi Store">
+    <meta property="og:description" content="High-quality trousers, fast delivery. Order via WhatsApp.">
+    <meta property="og:image" content="assets/img/black.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>مرحبا بكم في نجمي ستور</h1>
+        <div class="header-top">
+            <h1 class="store-title" data-ar="مرحباً بكم في نجمي ستور" data-en="Welcome to Najmi Store">مرحباً بكم في نجمي ستور</h1>
+            <div class="header-left">
+                <button id="lang-toggle" class="lang-toggle" title="تبديل اللغة">EN</button>
+            </div>
+            <div class="header-right">
+                <button id="theme-toggle" class="theme-toggle" title="تبديل الوضع" aria-pressed="false">
+                    <span class="icon moon" aria-hidden="true">
+                        <!-- moon (outline) -->
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                    </span>
+                    <span class="icon sun" aria-hidden="true">
+                        <!-- sun -->
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8L6.76 4.84zM1 13h2v-2H1v2zm10 9h2v-2h-2v2zM17.24 19.16l1.79 1.79 1.79-1.79-1.79-1.8-1.79 1.8zM20 11h2v2h-2v-2zM12 5a7 7 0 100 14 7 7 0 000-14zm0-5h0v3h0V0zM4.22 19.78l1.79-1.79-1.79-1.8-1.79 1.8 1.79 1.79zM19.78 4.22l-1.79 1.79 1.79 1.8 1.79-1.8-1.79-1.79z"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hamburger"></span></button>
         <nav>
             <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="products.html">المنتجات</a></li>
-                <li><a href="#about">عن المتجر</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link" data-ar="عن المتجر" data-en="About">عن المتجر</a></li>
+                <li><a href="#products" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a></li>
+                <li><a href="#contact" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
+                
             </ul>
         </nav>
     </header>
     <main>
         <section id="home">
-            <h2>أحدث العروض</h2>
-            <p>استمتع بأفضل العروض والخصومات على منتجاتنا.</p>
-            <p style="color:#d35400;font-weight:bold;">
-              225بدل250 جنيه  لا تفوت الفرصة! تسوق الآن واحصل على خصم خاص لأول طلب لك.
-            </p>
-            <p style="color:#27ae60;">
-               و اكبر عرض عرض الالف. خمس بناطيل ب1000 جنية بدل 1125 لفترة محمودة
-            </p>
+            <h2 class="section-title" data-ar="🎉 أحدث العروض والخصومات" data-en="🎉 Latest Offers & Discounts">🎉 أحدث العروض والخصومات</h2>
+            <p class="section-desc" data-ar="تمتع بأفضل الأسعار على مجموعة حصرية من البناطيل الأصلية عالية الجودة" data-en="Enjoy the best prices on our exclusive collection of authentic, high-quality trousers">تمتع بأفضل الأسعار على مجموعة حصرية من البناطيل الأصلية عالية الجودة</p>
+            
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <p class="offer-title" data-ar="العرض الأساسي" data-en="Basic Offer">العرض الأساسي</p>
+                    <p class="offer-price" data-ar="225 ج.م" data-en="225 EGP">225 ج.م</p>
+                    <p class="offer-desc" data-ar="بدل السعر الأصلي 250 ج.م" data-en="Instead of 250 EGP">بدل السعر الأصلي 250 ج.م</p>
+                    <span class="offer-discount">-10%</span>
+                </div>
+                <div class="offer-card featured">
+                    <p class="offer-title" data-ar="العرض الأفضل" data-en="Best Offer">العرض الأفضل</p>
+                    <p class="offer-price">1000 ج.م</p>
+                    <p class="offer-desc" data-ar="خمس بناطيل بدل 1125 ج.م" data-en="5 Trousers instead of 1125 EGP">خمس بناطيل بدل 1125 ج.م</p>
+                    <span class="offer-discount">-11%</span>
+                </div>
+            </div>
         </section>
+        
         <section id="about">
-            <h2>عن المتجر</h2>
-            <p>نجمي ستور هو وجهتك المفضلة للتسوق عبر الإنترنت.</p>
-            <p style="color:#16a085;">
-                نحن فريق من الشباب نقدم افضل و احدث البناطيل و افضل جودة مقابل اقل سعر
-            </p>
-            <a href="products.html" class="buy-btn" style="display:inline-block;margin-top:15px;background:#2980b9;color:#fff;padding:10px 24px;border-radius:6px;text-decoration:none;font-weight:bold;">
-    تصفح جميع المنتجات
-</a>
+            <h2 class="section-title" data-ar="📍 عن نجمي ستور" data-en="📍 About Najmi Store">📍 عن نجمي ستور</h2>
+            <p class="section-desc" data-ar="نحن متخصصون في توفير أفضل منتجات الملابس برومة عالية وأسعار تنافسية" data-en="We specialize in providing premium quality clothing products at competitive prices">نحن متخصصون في توفير أفضل منتجات الملابس برومة عالية وأسعار تنافسية</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <p class="feature-text" data-ar="منتجات أصلية 100%" data-en="100% Authentic Products">منتجات أصلية 100%</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <p class="feature-text" data-ar="ضمان استرجاع الأموال" data-en="Money-back Guarantee">ضمان استرجاع الأموال</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <p class="feature-text" data-ar="توصيل سريع وآمن" data-en="Fast & Safe Delivery">توصيل سريع وآمن</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <p class="feature-text" data-ar="خدمة عملاء ممتازة" data-en="Excellent Customer Service">خدمة عملاء ممتازة</p>
+                </div>
+            </div>
+            
+           
         </section>
-        <section id="contact">
-            <h2>اتصل بنا</h2>
-            <p>لديك استفسار؟ لا تتردد في التواصل معنا.</p>
-            <p style="color:#8e44ad;">
-                تواصل معانا عبر
-            </p>
-            <ul style="list-style: none; padding: 0;">
-                <li>
-                    <strong>الجوال:</strong>
-                    <a href="tel:01027339331">
-                        <img src="assets/svg/phone.svg" alt="الجوال">
-                    </a>
-                </li>
-                <li>
-                    <strong>الواتساب:</strong>
-                    <a href="https://wa.me/201027339331" style="color:#25D366; text-decoration:underline;">
-                        <img src="assets/svg/whatsapp-svgrepo-com.svg" alt="الواتس اب" style="width:22px;vertical-align:middle;margin-left:6px;">
-                    </a>
-                </li>
-                <li>
-                    <strong>انستجرام:</strong>
-                    <a href="https://www.instagram.com/monajm889/" style="color:#25D366; text-decoration:underline;">
-                        <img src="assets/svg/instagram-svgrepo-com.svg" alt="انستجرام" style="width:22px;vertical-align:middle;margin-left:6px;">
-                    </a>
-                </li>
-            </ul>
+
+        <section id="products">
+            <h2 class="section-title" data-ar="🛍️ منتجاتنا" data-en="🛍️ Our Products">🛍️ منتجاتنا</h2>
+            <p class="section-desc" data-ar="تصفح مجموعتنا الواسعة من البناطيل عالية الجودة." data-en="Browse our wide collection of high-quality trousers.">تصفح مجموعتنا الواسعة من البناطيل عالية الجودة.</p>
+
+            <div class="products-list">
+                <div class="product-card">
+                    <img loading="lazy" src="assets/img/black.png" alt="بنطلون شبابي اسود" onclick="showModal('modal1')">
+                    <h3 data-ar="بنطلون شبابي عصري" data-en="Modern Youth Trouser">بنطلون شبابي عصري</h3>
+                    <p data-ar="خامة ممتازة ومقاسات متعددة" data-en="Excellent fabric and multiple sizes">خامة ممتازة ومقاسات متعددة</p>
+                    <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <img loading="lazy" src="assets/img/black.png" alt="بنطلون شبابي اسود">
+                        <h3 data-ar="بنطلون شبابي عصري" data-en="Modern Youth Trouser">بنطلون شبابي عصري</h3>
+                        <p data-ar="تفاصيل المنتج: شروال سمر ميلتون قطن 100%" data-en="Product details: 100% cotton">تفاصيل المنتج: شروال سمر ميلتون قطن 100%</p>
+                        <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img loading="lazy" src="assets/img/z.png" alt="بنطلون شبابي زيتي" onclick="showModal('modal2')">
+                    <h3 data-ar="بنطلون زيتي شبابي" data-en="Olive Youth Trouser">بنطلون زيتي شبابي</h3>
+                    <p data-ar="مريح وأنيق لجميع المناسبات" data-en="Comfortable and stylish for all occasions">مريح وأنيق لجميع المناسبات</p>
+                    <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <img loading="lazy" src="assets/img/z.png" alt="بنطلون شبابي زيتي">
+                        <h3 data-ar="بنطلون زيتي شبابي" data-en="Olive Youth Trouser">بنطلون زيتي شبابي</h3>
+                        <p data-ar="تفاصيل المنتج: شروال سمر ميلتون قطن 100%" data-en="Product details: 100% cotton">تفاصيل المنتج: شروال سمر ميلتون قطن 100%</p>
+                        <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img loading="lazy" src="assets/img/r.png" alt="بنطلون رمادي" onclick="showModal('modal3')">
+                    <h3 data-ar="بنطلون الرمادي" data-en="Gray Trouser">بنطلون الرمادي</h3>
+                    <p data-ar="ستايل عملي وجودة عالية" data-en="Practical style and high quality">ستايل عملي وجودة عالية</p>
+                    <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <img loading="lazy" src="assets/img/r.png" alt="بنطلون الرمادي">
+                        <h3 data-ar="بنطلون الرمادي" data-en="Gray Trouser">بنطلون الرمادي</h3>
+                        <p data-ar="تفاصيل المنتج: شروال سمر ميلتون قطن 100%" data-en="Product details: 100% cotton">تفاصيل المنتج: شروال سمر ميلتون قطن 100%</p>
+                        <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img loading="lazy" src="assets/img/m.png" alt="بنطلون Mint Green" onclick="showModal('modal4')">
+                    <h3 data-ar="بنطلون Mint Green" data-en="Mint Green Trouser">بنطلون Mint Green</h3>
+                    <p data-ar="خامة قطنية مريحة" data-en="Comfortable cotton fabric">خامة قطنية مريحة</p>
+                    <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                    <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                </div>
+                <div id="modal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <img loading="lazy" src="assets/img/m.png" alt="بنطلون Mint Green">
+                        <h3 data-ar="بنطلون Mint Green" data-en="Mint Green Trouser">بنطلون Mint Green</h3>
+                        <p data-ar="تفاصيل المنتج: شروال سمر ميلتون قطن 100%" data-en="Product details: 100% cotton">تفاصيل المنتج: شروال سمر ميلتون قطن 100%</p>
+                        <p data-ar="225 جنيه بدل 250" data-en="225 EGP instead of 250">225 جنيه بدل 250</p>
+                        <a href="https://wa.me/201027339331" class="buy-btn" target="_blank" data-ar="اطلب الآن عبر واتساب" data-en="Order via WhatsApp">اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title" data-ar="📞 معلومات التواصل" data-en="📞 Contact Information">📞 معلومات التواصل</h2>
+            <div class="contact-info">
+                <div class="contact-item phone-item">
+                    <div class="contact-icon">
+                        <img loading="lazy" src="assets/svg/phone.svg" alt="Phone">
+                    </div>
+                    <a href="tel:+201027339331" target="_blank">
+                        <h3>01027339331</h3>
+                        <p class="contact-label" data-ar="اتصل بنا مباشرة" data-en="Call us directly">اتصل بنا مباشرة</p>
+                    </a>
+                </div>
+                <div class="contact-item email-item">
+                    <div class="contact-icon">
+                        <img loading="lazy" src="assets/svg/Email.svg" alt="Email">
+                    </div>
+                    <a href="mailto:abdo267895@gmail.com" target="_blank">
+                        <h3>abdo267895@gmail.com</h3>
+                        <p class="contact-label" data-ar="أرسل لنا بريداً" data-en="Send us an email">أرسل لنا بريداً</p>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- روابط التواصل الاجتماعي -->
+            <div class="social-media-section">
+                <h3 class="social-title" data-ar="تابعنا على وسائل التواصل" data-en="Follow us on social media">تابعنا على وسائل التواصل</h3>
+                <div class="social-media">
+                    <a href="https://wa.me/01027339331" target="_blank" class="social-icon" title="WhatsApp">
+                        <img loading="lazy" src="assets/svg/whatsapp-svgrepo-com.svg" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/monajm889/" target="_blank" class="social-icon" title="Instagram">
+                        <img loading="lazy" src="assets/svg/instagram-svgrepo-com.svg" alt="Instagram">
+                    </a>
+                    
+                    <a href="https://www.youtube.com/" target="_blank" class="social-icon youtube-icon" title="YouTube">
+                        <img loading="lazy" src="assets/svg/youtube-svgrepo-com.svg" alt="YouTube">
+                    </a>
+                    
+                   
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
-        <p>&copy; 2025 نجمي ستور. جميع الحقوق محفوظة.</p>
+        <h2 class="footer-text">
+                <span >© 2025</span>
+                <a  href="https://abdelrhman333e.netlify.app/" target="_blank" rel="noopener noreferrer">عبدالرحمن</a>
+                <span >جميع الحقوق محفوظة.</span>
+            </h2>
     </footer>
+    
+    <script>
+        // عناصر DOM الأساسية
+        const langToggle = document.getElementById('lang-toggle');
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        const header = document.querySelector('header');
+
+        let currentLang = localStorage.getItem('lang') || 'ar';
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+
+        // إنشاء spacer بعد الهيدر لمنع الشرائح السوداء عند التمرير
+        const headerSpacer = document.createElement('div');
+        headerSpacer.id = 'header-spacer';
+        header.parentNode.insertBefore(headerSpacer, header.nextSibling);
+
+        // تطبيق الإعدادات المحفوظة
+        applyLanguage(currentLang);
+        applyTheme(currentTheme);
+        updateHeaderHeight();
+        handleSticky();
+
+        // أحداث الحجم
+        window.addEventListener('resize', updateHeaderHeight);
+
+        // Throttled scroll handling using requestAnimationFrame to reduce jank
+        let isTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!isTicking) {
+                window.requestAnimationFrame(() => {
+                    handleSticky();
+                    isTicking = false;
+                });
+                isTicking = true;
+            }
+        });
+
+        // تبديل اللغة
+        langToggle.addEventListener('click', () => {
+            // simple switch without rotation animation — change label only
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            localStorage.setItem('lang', currentLang);
+            applyLanguage(currentLang);
+        });
+
+        // تبديل الوضع مع أنيميشن للزر
+        themeToggle.addEventListener('click', () => {
+            // أنيميشن بصري للزر
+            themeToggle.classList.add('animating');
+            setTimeout(() => themeToggle.classList.remove('animating'), 650);
+
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            applyTheme(currentTheme);
+        });
+
+        function applyLanguage(lang) {
+            htmlElement.setAttribute('lang', lang);
+            htmlElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+                const text = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+                if (!el.querySelector('*')) {
+                    el.textContent = text;
+                } else {
+                    el.innerHTML = text;
+                }
+            });
+
+            langToggle.textContent = lang === 'ar' ? 'EN' : 'AR';
+
+            // Reorder navigation for English: Home, About, Products, Contact
+            const navList = document.querySelector('nav ul');
+            if (navList) {
+                const liHome = document.querySelector('a[href="#home"]').closest('li');
+                const liProducts = document.querySelector('a[href="#products"]').closest('li');
+                const liAbout = document.querySelector('a[href="#about"]').closest('li');
+                const liContact = document.querySelector('a[href="#contact"]').closest('li');
+
+                if (lang === 'en') {
+                    // desired LTR order
+                    navList.appendChild(liHome);
+                    navList.appendChild(liAbout);
+                    navList.appendChild(liProducts);
+                    navList.appendChild(liContact);
+                } else {
+                    // original Arabic order (home, products, about, contact)
+                    navList.appendChild(liHome);
+                    navList.appendChild(liProducts);
+                    navList.appendChild(liAbout);
+                    navList.appendChild(liContact);
+                }
+            }
+        }
+
+        function applyTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            // don't replace button content (icons handled via CSS), only update title
+            themeToggle.title = theme === 'dark' ? 'الوضع الفاتح' : 'الوضع الداكن';
+        }
+
+        // تحديث padding جسم الصفحة ليتسق مع ارتفاع الهيدر المثبت
+        function updateHeaderHeight() {
+            if (!header) return;
+            // spacer يملأ المكان عند تثبيت الهيدر بدلاً من تعديل padding على body
+            const h = header.offsetHeight;
+            if (headerSpacer) {
+                if (header.classList.contains('sticky')) headerSpacer.style.height = h + 'px';
+                else headerSpacer.style.height = '0px';
+            }
+        }
+
+        // اجعل الهيدر "ثابت" عند التمرير قليلًا
+        function handleSticky() {
+            if (!header) return;
+            // When entering sticky, set spacer height first to avoid layout jump
+            if (window.scrollY > 10 && !header.classList.contains('sticky')) {
+                if (headerSpacer) headerSpacer.style.height = header.offsetHeight + 'px';
+                header.classList.add('sticky');
+            } else if (window.scrollY <= 10 && header.classList.contains('sticky')) {
+                header.classList.remove('sticky');
+                if (headerSpacer) headerSpacer.style.height = '0px';
+            }
+        }
+
+        // عرض وإغلاق المودال (يستخدم صنف open بدل style.display)
+        function showModal(id) {
+            const m = document.getElementById(id);
+            if (!m) return;
+            m.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const m = document.getElementById(id);
+            if (!m) return;
+            m.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // إغلاق المودال عند النقر خارج محتوى المودال
+        window.addEventListener('click', (event) => {
+            if (event.target && event.target.classList && event.target.classList.contains('modal')) {
+                event.target.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Smooth scroll for header nav links with header offset and reveal animation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+                const target = document.querySelector(href);
+                if (!target) return;
+
+                const headerHeight = header ? header.offsetHeight : 0;
+                const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
+
+                window.scrollTo({ top: targetTop, behavior: 'smooth' });
+
+                // add a short highlight animation
+                target.classList.remove('section-reveal');
+                // force reflow to restart animation
+                void target.offsetWidth;
+                target.classList.add('section-reveal');
+                setTimeout(() => target.classList.remove('section-reveal'), 900);
+            });
+        });
+
+        // Nav (hamburger) toggle for small screens
+        const navToggle = document.getElementById('nav-toggle');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                header.classList.toggle('nav-open');
+            });
+        }
+    </script>
 </body>
 </html>
